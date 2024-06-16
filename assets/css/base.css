@@ -1,1 +1,11 @@
-/*# sourceMappingURL=base.css.map */
+body {
+  position: relative;
+  background-color: #F2F2F2;
+  font-family: "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}/*# sourceMappingURL=base.css.map */

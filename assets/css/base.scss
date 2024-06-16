@@ -1,0 +1,21 @@
+$background-color: #F2F2F2;
+$primary-color: #0D0D0D;
+$primary-font: 'Helvetica Neue', sans-serif;
+$font-weights: (
+	"regular": 400,
+	"medium": 500,
+	"bold": 700
+);
+
+
+body {
+    position: relative;
+	background-color: $background-color;
+	font-family: $primary-font;
+	min-height: 100vh;
+}
+
+.container{
+    max-width: 85%;
+    margin: 0 auto;
+}
