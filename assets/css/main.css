@@ -1,15 +1,3 @@
-body {
-  position: relative;
-  background-color: #F2F2F2;
-  font-family: "Helvetica Neue", sans-serif;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 85%;
-  margin: 0 auto;
-}
-
 * {
   padding: 0px;
   margin: 0px;
@@ -103,4 +91,91 @@ legend {
 
 a, a:link, a:visited {
   text-decoration: none;
+}
+
+body {
+  position: relative;
+  background-color: #F2F2F2;
+  font-family: "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+}
+
+.base-btn {
+  border: 1px solid #0D0D0D;
+  color: #0D0D0D;
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}
+.base-btn:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 27px;
+}
+header .guide-btn {
+  padding: 5px 15px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.paste {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 30px auto;
+}
+.paste input::-moz-placeholder, .paste textarea::-moz-placeholder {
+  color: #a1a1a1;
+  font-weight: 300;
+}
+.paste input::placeholder, .paste textarea::placeholder {
+  color: #a1a1a1;
+  font-weight: 300;
+}
+.paste__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.paste__author {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.paste__text {
+  font-size: 23px;
+  min-height: 55vh;
+  resize: none;
+}
+
+footer {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  font-size: 27px;
+  display: flex;
+  justify-content: end;
+}
+footer select {
+  margin-right: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #0D0D0D;
+}
+footer .base-btn {
+  margin-right: 15px;
 }/*# sourceMappingURL=main.css.map */

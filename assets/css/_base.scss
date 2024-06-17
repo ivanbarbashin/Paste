@@ -1,7 +1,9 @@
 $background-color: #F2F2F2;
 $primary-color: #0D0D0D;
+$second-color: #a1a1a1;
 $primary-font: 'Helvetica Neue', sans-serif;
 $font-weights: (
+	"tiny": 300,
 	"regular": 400,
 	"medium": 500,
 	"bold": 700
@@ -15,7 +17,20 @@ body {
 	min-height: 100vh;
 }
 
+.base-btn {
+	border: 1px solid $primary-color;
+	color: $primary-color;
+	padding: 5px 20px;
+	border-radius: 20px;
+	transition: .2s ease;
+
+	&:hover{
+		background-color: rgb(230, 230, 230);
+	}
+}
+
+
 .container{
-    max-width: 85%;
+    max-width: 70%;
     margin: 0 auto;
 }

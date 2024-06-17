@@ -3,28 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.cdnfonts.com/css/helvetica-neue-5?styles=103510,103499,103508,103509,103502,103503" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/helvetica-neue-5?styles=103510,103499,103506,103507,103508,103509,103502,103503" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="icon" type="image/x-icon" href="assets/img/logo.png">
 	<title>PASTE</title>
 </head>
-<body>
+<body class="">
 	<div class="container">
 		<header>
-			<a href="" class="guide-btn">?</a>
-			<a href="" class="login-btn">LOGIN</a>
+			<a href="" class="base-btn guide-btn">?</a>
+			<a href="" class="base-btn login-btn">LOGIN</a>
 		</header>
 		<main>
 			<form class="paste" action="">
 				<input type="text" placeholder="Title" class="paste__title">
 				<input type="text" placeholder="Your name" class="paste__author">
-				<input type="textarea" placeholder="Write something or press ‘space’ for AI" class="paste__text">
+				<textarea name="" id="" placeholder="Write something or press ‘space’ for AI" class="paste__text"></textarea>
 			</form>
 		</main>
 		<footer>
-			<button><img src="assets/img/edit_together.png" alt="edit_together"></button>
-			<button><img src="assets/img/settings.png" alt="edit_together"></button>
-			<button>PUBLISH</button>
+			<select name="category" id="category-select">
+				<option value="Category">Category</option>
+				<option value="Note">Note</option>
+				<option value="Code">Code</option>
+				<option value="Article">Article</option>
+			</select>
+			<select name="expiration" id="expiration-select">
+				<option value="expiration">Expiration</option>
+				<option value="1hour">burn after read</option>
+				<option value="1hour">an hour</option>
+				<option value="1day">a day</option>
+				<option value="1week">a week</option>
+				<option value="1month">a month</option>
+				<option value="1year">a year</option>
+			</select>
+			<button class="base-btn"><img src="assets/img/edit_together.png" alt="edit_together"></button>
+			<button class="base-btn">PUBLISH</button>
 		</footer>
 	</div>
 </body>
