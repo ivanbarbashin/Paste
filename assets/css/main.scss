@@ -124,7 +124,7 @@ footer {
 	}
 
 	&__input {
-		font-size: 25px;
+		font-size: 22px;
 		font-weight: weight(tiny);
 		margin-bottom: 15px;
 		padding-bottom: 3px;
@@ -132,11 +132,23 @@ footer {
 		border-bottom: 1px solid $second-color;
 	}
 
+	.buttons{
+		margin: 5px auto 0;
+	}
+
 	a {
 		color: $primary-color;
 		border-bottom: 1px solid $second-color;
 		font-size: 18px;
-		margin: 5px auto;
+		margin: 0 5px
+	}
+
+	button {
+		@extend a;
+	}
+
+	.reglog-form__link{
+		margin: 5px auto 0;
 	}
 }
 
