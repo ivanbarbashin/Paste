@@ -36,6 +36,12 @@ header {
 	.guide-btn {
 		padding: 5px 15px;
 	}
+
+	// my pastes page
+	.search {
+		width: 50%;
+		border-bottom: 1px solid $second-color;
+	}
 }
 
 
@@ -83,14 +89,14 @@ header {
 
 footer {
 	position: absolute;
-	right: 5%;
-	bottom: 10%;
+	right: 0%;
+	bottom: -25%;
 	font-size: 27px;
 	display: flex;
 	justify-content: end;
 
 	select {
-		margin-right: 15px;
+		margin-right: 20px;
 		appearance: none;
 		cursor: pointer;
 		padding: 10px;
@@ -99,5 +105,80 @@ footer {
 
 	.base-btn{
 		margin-right: 15px;
+	}
+}
+
+
+
+// Login
+.reglog-form{
+	height: 50vh;
+	@include flexCenter(column);
+	align-items: start;
+	margin: 0 auto;
+	width: fit-content;
+
+	h1 {
+		font-size: 45px;
+		margin-bottom: 50px;
+	}
+
+	&__input {
+		font-size: 25px;
+		font-weight: weight(tiny);
+		margin-bottom: 15px;
+		padding-bottom: 3px;
+		width: 100%;
+		border-bottom: 1px solid $second-color;
+	}
+
+	a {
+		color: $primary-color;
+		border-bottom: 1px solid $second-color;
+		font-size: 18px;
+		margin: 5px auto;
+	}
+}
+
+
+
+// Help page
+.login-btn--help {
+	margin-left: auto;
+}
+
+
+
+
+.pastes-catalog {
+	width: 70%;
+	margin: 10vh auto 0px;
+
+	.paste-item{
+		display: flex;
+		align-items: center;
+		font-size: 30px;
+		font-weight: weight(tiny);
+		margin-bottom: 25px;
+
+
+		&__date {
+			color: $second-color;
+			margin-right: 10px;
+		}
+
+		&__vertical-line {
+			color: $second-color;
+			margin-right: 10px;
+		}
+
+		&__title {
+			margin-right: 30px;
+		}
+
+		&__delite-btn img{
+			height: 35px;
+			margin-left: 10px;
+		}
 	}
 }

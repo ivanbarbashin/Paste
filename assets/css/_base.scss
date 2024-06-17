@@ -14,7 +14,6 @@ body {
     position: relative;
 	background-color: $background-color;
 	font-family: $primary-font;
-	min-height: 100vh;
 }
 
 .base-btn {
@@ -31,6 +30,7 @@ body {
 
 
 .container{
+	position: relative;
     max-width: 70%;
     margin: 0 auto;
 }
