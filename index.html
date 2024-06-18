@@ -41,5 +41,27 @@
 			<button class="base-btn">PUBLISH</button>
 		</footer>
 	</div>
+
+	<script>
+		let textareaItem = document.querySelector('.paste textarea');
+		const logSelection = () => {
+            const selectionStart = textareaItem.selectionStart;
+            const selectionEnd = textareaItem.selectionEnd;
+            const selectedText = textareaItem.value.substring(selectionStart, selectionEnd);
+            
+			const beforeSelection = textareaItem.value.substring(0, selectionStart);
+            const afterSelection = textareaItem.value.substring(selectionEnd);
+            
+
+            if (selectedText.length > 0) {
+                console.log('Выделенный текст:', selectedText);
+				console.log('Невыделенный текст:', beforeSelection, afterSelection);
+            }
+        };
+
+        textareaItem.addEventListener('select', () => {
+            setTimeout(logSelection, 0);
+        });
+	</script>
 </body>
 </html>
