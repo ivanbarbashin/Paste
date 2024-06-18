@@ -20,6 +20,13 @@
 				<input type="text" placeholder="Your name" class="paste__author">
 				<textarea name="" id="" placeholder="Write something or press ‘space’ for AI" class="paste__text"></textarea>
 			</form>
+			<div id="popupMenu">
+				<button class="cursiv">I</button>
+				<button class="bold">B</button>
+				<button class="underline">U</button>
+				<button>H1</button>
+				<button>H2</button>
+			</div>
 		</main>
 		<footer>
 			<select name="category" id="category-select">
@@ -43,7 +50,11 @@
 	</div>
 
 	<script>
-		let textareaItem = document.querySelector('.paste textarea');
+		const textareaItem = document.querySelector('.paste textarea');
+		const popupMenu = document.getElementById('popupMenu');
+		console.log(popupMenu)
+
+		// function to see selected text
 		const logSelection = () => {
             const selectionStart = textareaItem.selectionStart;
             const selectionEnd = textareaItem.selectionEnd;
@@ -61,6 +72,34 @@
 
         textareaItem.addEventListener('select', () => {
             setTimeout(logSelection, 0);
+        });
+
+
+		// popup menu for editing
+		const showPopupMenu = (event) => {
+			const selectionStart = textareaItem.selectionStart;
+            const selectionEnd = textareaItem.selectionEnd;
+            const selectedText = textareaItem.value.substring(selectionStart, selectionEnd);
+
+            if (selectedText.length > 0) {
+                popupMenu.style.display = 'flex';
+            } else {
+                popupMenu.style.display = 'none';
+            }
+        };
+
+        const hidePopupMenu = () => {
+            popupMenu.style.display = 'none';
+        };
+
+        textareaItem.addEventListener('mouseup', () => {
+            setTimeout(showPopupMenu, 0);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!textareaItem.contains(event.target) && !popupMenu.contains(event.target)) {
+                hidePopupMenu();
+            }
         });
 	</script>
 </body>

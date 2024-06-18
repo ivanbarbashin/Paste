@@ -55,36 +55,69 @@ header {
 }
 
 
-// ===CREATE NEW PASTE===
-
-.paste {
+main {
 	display: flex;
-	flex-direction: column;
-	width: 70%;
-	margin: 30px auto;
+	width: 100%;
+	position: relative;
 
-	input::placeholder, textarea::placeholder{
-		color: $second-color;
-		font-weight: weight(tiny);
+
+	// ===CREATE NEW PASTE===
+	.paste {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		margin: 30px auto;
+
+		input::placeholder, textarea::placeholder{
+			color: $second-color;
+			font-weight: weight(tiny);
+		}
+
+		&__title {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		
+		&__author {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		&__text {
+			font-size: 23px;
+			min-height: 55vh;
+			resize: none;
+		}
 	}
 
-	&__title {
-		font-size: 30px;
-		margin-bottom: 10px;
-	}
-	
-	&__author {
-		font-size: 18px;
-		margin-bottom: 20px;
-	}
 
-	&__text {
-		font-size: 23px;
-		min-height: 55vh;
-		resize: none;
+	// pop menu for editing
+	#popupMenu {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $background-color;
+		border: 1px solid $second-color;
+		padding: 10px;		
+		margin: 20px 15px 0 0;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+		button {
+			font-size: 25px;
+			border-right: 1px solid $second-color;
+			padding: 0 10px;
+
+			&:hover{
+				background-color: rgb(230, 230, 230);
+			}
+
+			&:last-child {
+				border-right:none;
+			}
+		}
 	}
 }
-
 
 
 footer {

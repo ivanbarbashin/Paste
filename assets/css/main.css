@@ -136,32 +136,59 @@ header .search {
   color: white;
 }
 
-.paste {
+main {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+main .paste {
   display: flex;
   flex-direction: column;
   width: 70%;
   margin: 30px auto;
 }
-.paste input::-moz-placeholder, .paste textarea::-moz-placeholder {
+main .paste input::-moz-placeholder, main .paste textarea::-moz-placeholder {
   color: #a1a1a1;
   font-weight: 300;
 }
-.paste input::placeholder, .paste textarea::placeholder {
+main .paste input::placeholder, main .paste textarea::placeholder {
   color: #a1a1a1;
   font-weight: 300;
 }
-.paste__title {
+main .paste__title {
   font-size: 30px;
   margin-bottom: 10px;
 }
-.paste__author {
+main .paste__author {
   font-size: 18px;
   margin-bottom: 20px;
 }
-.paste__text {
+main .paste__text {
   font-size: 23px;
   min-height: 55vh;
   resize: none;
+}
+main #popupMenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #F2F2F2;
+  border: 1px solid #a1a1a1;
+  padding: 10px;
+  margin: 20px 15px 0 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+main #popupMenu button {
+  font-size: 25px;
+  border-right: 1px solid #a1a1a1;
+  padding: 0 10px;
+}
+main #popupMenu button:hover {
+  background-color: rgb(230, 230, 230);
+}
+main #popupMenu button:last-child {
+  border-right: none;
 }
 
 footer {
