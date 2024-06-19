@@ -24,8 +24,8 @@
 				<button class="cursiv">I</button>
 				<button class="bold">B</button>
 				<button class="underline">U</button>
-				<button>H1</button>
-				<button>H2</button>
+				<button class="h1-button">H1</button>
+				<button class="h2-button">H2</button>
 			</div>
 		</main>
 		<footer>
@@ -52,16 +52,22 @@
 	<script>
 		const textareaItem = document.querySelector('.paste textarea');
 		const popupMenu = document.getElementById('popupMenu');
-		console.log(popupMenu)
+
+		let selectionStartText = '';
+		let selectionEndText = '';
+		let selectedText = '';
+		
+		let beforeSelection = '';
+		let afterSelection = '';
 
 		// function to see selected text
 		const logSelection = () => {
-            const selectionStart = textareaItem.selectionStart;
-            const selectionEnd = textareaItem.selectionEnd;
-            const selectedText = textareaItem.value.substring(selectionStart, selectionEnd);
+            selectionStartText = textareaItem.selectionStart;
+            selectionEndText = textareaItem.selectionEnd;
+            selectedText = textareaItem.value.substring(selectionStartText, selectionEndText);
             
-			const beforeSelection = textareaItem.value.substring(0, selectionStart);
-            const afterSelection = textareaItem.value.substring(selectionEnd);
+			beforeSelection = textareaItem.value.substring(0, selectionStartText);
+            afterSelection = textareaItem.value.substring(selectionEndText);
             
 
             if (selectedText.length > 0) {
@@ -99,8 +105,33 @@
         document.addEventListener('click', (event) => {
             if (!textareaItem.contains(event.target) && !popupMenu.contains(event.target)) {
                 hidePopupMenu();
+				selectionStartText = '';
+				selectionEndText = '';
+				selectedText = '';
+				
+				beforeSelection = '';
+				afterSelection = '';
             }
         });
+
+		textareaItem.addEventListener('input', function(){
+            hidePopupMenu();
+			selectionStartText = '';
+			selectionEndText = '';
+			selectedText = '';
+				
+			beforeSelection = '';
+			afterSelection = '';
+        });
+
+
+
+		// Buttons to redact
+		const cursivButton = document.querySelector('main #popupMenu .cursiv');
+		const boldButton = document.querySelector('main #popupMenu .bold');
+		const underlineButton = document.querySelector('main #popupMenu .underline');
+		const h1Button = document.querySelector('main #popupMenu .h1-button');
+		const h2Button = document.querySelector('main #popupMenu .h2-button');
 	</script>
 </body>
 </html>

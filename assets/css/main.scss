@@ -116,6 +116,19 @@ main {
 				border-right:none;
 			}
 		}
+		
+
+		.cursiv {
+			font-style: italic;
+		}
+
+		.bold {
+			font-weight: weight(bold);
+		}
+
+		.underline {
+			text-decoration: underline;
+		}
 	}
 }
 

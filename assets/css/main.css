@@ -190,6 +190,15 @@ main #popupMenu button:hover {
 main #popupMenu button:last-child {
   border-right: none;
 }
+main #popupMenu .cursiv {
+  font-style: italic;
+}
+main #popupMenu .bold {
+  font-weight: 700;
+}
+main #popupMenu .underline {
+  text-decoration: underline;
+}
 
 footer {
   position: absolute;
