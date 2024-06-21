@@ -18,15 +18,8 @@
 			<form class="paste" action="">
 				<input type="text" placeholder="Title" class="paste__title">
 				<input type="text" placeholder="Your name" class="paste__author">
-				<textarea name="" id="" placeholder="Write something or press ‘space’ for AI" class="paste__text"></textarea>
+				<textarea id="mytextarea">Hello, World!</textarea>
 			</form>
-			<div id="popupMenu">
-				<button class="cursiv">I</button>
-				<button class="bold">B</button>
-				<button class="underline">U</button>
-				<button class="h1-button">H1</button>
-				<button class="h2-button">H2</button>
-			</div>
 		</main>
 		<footer>
 			<select name="category" id="category-select">
@@ -49,89 +42,11 @@
 		</footer>
 	</div>
 
+	<script src="https://cdn.tiny.cloud/1/g2syn8ze2wsu9hdvgpcbhkat9ybceq0cmp4jasi4rtjvkcrm/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 	<script>
-		const textareaItem = document.querySelector('.paste textarea');
-		const popupMenu = document.getElementById('popupMenu');
-
-		let selectionStartText = '';
-		let selectionEndText = '';
-		let selectedText = '';
-		
-		let beforeSelection = '';
-		let afterSelection = '';
-
-		// function to see selected text
-		const logSelection = () => {
-            selectionStartText = textareaItem.selectionStart;
-            selectionEndText = textareaItem.selectionEnd;
-            selectedText = textareaItem.value.substring(selectionStartText, selectionEndText);
-            
-			beforeSelection = textareaItem.value.substring(0, selectionStartText);
-            afterSelection = textareaItem.value.substring(selectionEndText);
-            
-
-            if (selectedText.length > 0) {
-                console.log('Выделенный текст:', selectedText);
-				console.log('Невыделенный текст:', beforeSelection, afterSelection);
-            }
-        };
-
-        textareaItem.addEventListener('select', () => {
-            setTimeout(logSelection, 0);
-        });
-
-
-		// popup menu for editing
-		const showPopupMenu = (event) => {
-			const selectionStart = textareaItem.selectionStart;
-            const selectionEnd = textareaItem.selectionEnd;
-            const selectedText = textareaItem.value.substring(selectionStart, selectionEnd);
-
-            if (selectedText.length > 0) {
-                popupMenu.style.display = 'flex';
-            } else {
-                popupMenu.style.display = 'none';
-            }
-        };
-
-        const hidePopupMenu = () => {
-            popupMenu.style.display = 'none';
-        };
-
-        textareaItem.addEventListener('mouseup', () => {
-            setTimeout(showPopupMenu, 0);
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!textareaItem.contains(event.target) && !popupMenu.contains(event.target)) {
-                hidePopupMenu();
-				selectionStartText = '';
-				selectionEndText = '';
-				selectedText = '';
-				
-				beforeSelection = '';
-				afterSelection = '';
-            }
-        });
-
-		textareaItem.addEventListener('input', function(){
-            hidePopupMenu();
-			selectionStartText = '';
-			selectionEndText = '';
-			selectedText = '';
-				
-			beforeSelection = '';
-			afterSelection = '';
-        });
-
-
-
-		// Buttons to redact
-		const cursivButton = document.querySelector('main #popupMenu .cursiv');
-		const boldButton = document.querySelector('main #popupMenu .bold');
-		const underlineButton = document.querySelector('main #popupMenu .underline');
-		const h1Button = document.querySelector('main #popupMenu .h1-button');
-		const h2Button = document.querySelector('main #popupMenu .h2-button');
-	</script>
+		tinymce.init({
+		  selector: '#mytextarea'
+		});
+	  </script>
 </body>
 </html>
