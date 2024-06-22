@@ -96,6 +96,7 @@ a, .reglog-form button, a:link, a:visited {
 
 body {
   position: relative;
+  min-height: 100vh;
   background-color: #F2F2F2;
   font-family: "Helvetica Neue", sans-serif;
 }
@@ -112,7 +113,6 @@ body {
 }
 
 .container {
-  position: relative;
   max-width: 70%;
   margin: 0 auto;
 }
@@ -147,6 +147,10 @@ main .paste {
   width: 70%;
   margin: 30px auto;
 }
+main .paste #mytextarea {
+  min-height: 70vh;
+  height: 70vh;
+}
 main .paste input::-moz-placeholder, main .paste textarea::-moz-placeholder {
   color: #a1a1a1;
   font-weight: 300;
@@ -171,8 +175,8 @@ main .paste__text {
 
 footer {
   position: absolute;
-  right: 0%;
-  bottom: -25%;
+  right: 7%;
+  bottom: 5%;
   font-size: 27px;
   display: flex;
   justify-content: end;

@@ -12,6 +12,7 @@ $font-weights: (
 
 body {
     position: relative;
+	min-height: 100vh;
 	background-color: $background-color;
 	font-family: $primary-font;
 }
@@ -30,7 +31,6 @@ body {
 
 
 .container{
-	position: relative;
     max-width: 70%;
     margin: 0 auto;
 }

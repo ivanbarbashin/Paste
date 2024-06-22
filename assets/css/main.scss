@@ -68,6 +68,11 @@ main {
 		width: 70%;
 		margin: 30px auto;
 
+		#mytextarea{
+			min-height: 70vh;
+			height: 70vh;
+		}
+
 		input::placeholder, textarea::placeholder{
 			color: $second-color;
 			font-weight: weight(tiny);
@@ -95,8 +100,8 @@ main {
 
 footer {
 	position: absolute;
-	right: 0%;
-	bottom: -25%;
+	right: 7%;
+	bottom: 5%;
 	font-size: 27px;
 	display: flex;
 	justify-content: end;

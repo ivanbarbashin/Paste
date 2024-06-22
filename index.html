@@ -38,14 +38,22 @@
 				<option value="1year">a year</option>
 			</select>
 			<button class="base-btn"><img src="assets/img/edit_together.png" alt="edit_together"></button>
-			<button class="base-btn">PUBLISH</button>
+			<button class="base-btn publish-editor-button">PUBLISH</button>
 		</footer>
 	</div>
 
 	<script src="https://cdn.tiny.cloud/1/g2syn8ze2wsu9hdvgpcbhkat9ybceq0cmp4jasi4rtjvkcrm/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 	<script>
 		tinymce.init({
-		  selector: '#mytextarea'
+			selector: '#mytextarea',
+			statusbar: false
+		});
+
+		const editorTextarea = document.querySelector('#mytextarea');
+		const editorButton = document.querySelector('.publish-editor-button');
+		editorButton.addEventListener('click', function(){
+			let text = tinymce.get('mytextarea').getContent();
+			console.log(text)
 		});
 	  </script>
 </body>
