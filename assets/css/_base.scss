@@ -33,4 +33,12 @@ body {
 .container{
     max-width: 70%;
     margin: 0 auto;
+
+	@media (max-width: 1200px) {
+		max-width: 80%;
+	}
+
+	@media (max-width: 800px) {
+		max-width: 90%;
+	}
 }
