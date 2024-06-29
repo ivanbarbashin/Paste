@@ -149,7 +149,7 @@ header .right-buttons #toggle-theme {
 header .right-buttons .checkbox-label {
   background-color: #F2F2F2;
   border: 1px solid #0D0D0D;
-  width: 65px;
+  width: 68px;
   height: 34px;
   border-radius: 50px;
   position: relative;
@@ -171,10 +171,10 @@ header .right-buttons .fa-sun {
 }
 header .right-buttons .checkbox-label .ball {
   background-color: #0D0D0D;
-  width: 30px;
+  width: 31px;
   height: 30px;
   position: absolute;
-  left: 1px;
+  left: 2px;
   top: 1px;
   border-radius: 50%;
   transition: transform 0.1s linear;

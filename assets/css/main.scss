@@ -50,7 +50,7 @@ header {
 		.checkbox-label {
 			background-color: $background-color;
 			border: 1px solid $primary-color;
-			width: 65px;
+			width: 68px;
 			height: 34px;
 			border-radius: 50px;
 			position: relative;
@@ -76,10 +76,10 @@ header {
 		
 		.checkbox-label .ball {
 			background-color: $primary-color;
-			width: 30px;
+			width: 31px;
 			height: 30px;
 			position: absolute;
-			left: 1px;
+			left: 2px;
 			top: 1px;
 			border-radius: 50%;
 			transition: transform 0.1s linear;

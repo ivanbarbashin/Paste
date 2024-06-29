@@ -71,6 +71,8 @@
 		const aTags = document.querySelectorAll("a");
 		const toggleThemeButton = document.querySelector(".checkbox-label");
 		const toggleThemeBall = document.querySelector(".checkbox-label .ball");
+		const deleteButton = document.querySelectorAll(".paste-item__delite-btn");
+		const deleteButtonImg = document.querySelectorAll(".paste-item__delite-btn img");
 
 		checkbox.addEventListener("change", () => {
 			document.body.classList.toggle("dark");
@@ -82,7 +84,14 @@
 			}
 			for(let i = 0; i < aTags.length; i++){
 				aTags[i].classList.toggle("dark-button");
-				
+			}
+			for(let i = 0; i < deleteButton.length; i++){
+				deleteButton[i].style.cssText = `border: none;`;
+				if (deleteButtonImg[i].getAttribute('src') == `assets/img/delete.svg`){
+					deleteButtonImg[i].src = `assets/img/delete-dark_theme.svg`;
+				} else {
+					deleteButtonImg[i].src = `assets/img/delete.svg`;
+				}
 			}
 		});
 	</script>
