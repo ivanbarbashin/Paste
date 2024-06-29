@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -132,6 +133,49 @@ header {
   display: flex;
   justify-content: space-between;
   font-size: 27px;
+}
+header .right-buttons {
+  display: flex;
+  align-items: center;
+}
+header .right-buttons .toggle-theme-btn {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+header .right-buttons #toggle-theme {
+  opacity: 0;
+}
+header .right-buttons .checkbox-label {
+  background-color: #0D0D0D;
+  width: 65px;
+  height: 32px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .right-buttons .fa-moon {
+  color: #f1c40f;
+}
+header .right-buttons .fa-sun {
+  color: #f39c12;
+}
+header .right-buttons .checkbox-label .ball {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+header .right-buttons #toggle-theme:checked + .checkbox-label .ball {
+  transform: translateX(31px);
 }
 header .guide-btn {
   padding: 5px 15px;

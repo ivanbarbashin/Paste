@@ -13,7 +13,17 @@
 		<header>
 			<a href="help.html" class="base-btn guide-btn">?</a>
 			<input type="text" placeholder="Search" class="search">
-			<a href="index.html" class="base-btn login-btn">CREATE</a>
+			<div class="right-buttons">
+				<section class="toggle-theme-btn">
+					<input type="checkbox" id="toggle-theme">
+					<label for="toggle-theme" class="checkbox-label">
+					  <i class="fas fa-moon"></i>
+					  <i class="fas fa-sun"></i>
+					  <span class="ball"></span>
+					</label>
+				  </section>
+				  <a href="index.html" class="base-btn login-btn">CREATE</a>
+			</div>
 		</header>
 		<main class="pastes-catalog">
 			<section class="paste-item">
@@ -54,4 +64,12 @@
 		</main>
 	</div>
 </body>
+
+<script src="https://kit.fontawesome.com/3cdfeaa995.js" crossorigin="anonymous"></script>
+<script>
+	const checkbox = document.getElementById("checkbox")
+	checkbox.addEventListener("change", () => {
+		document.body.classList.toggle("dark")
+	})
+</script>
 </html>
