@@ -431,6 +431,12 @@ footer {
 		margin: 5px auto 0;
 	}
 
+	.link-dark {
+		color: $background-color;
+		border: none;
+		border-bottom: 1px solid $background-color;
+	}
+
 	a {
 		color: $primary-color;
 		border-bottom: 1px solid $second-color;

@@ -551,6 +551,11 @@ footer .base-btn {
 .reglog-form .buttons {
   margin: 5px auto 0;
 }
+.reglog-form .link-dark {
+  color: #F2F2F2;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+}
 .reglog-form a, .reglog-form button {
   color: #0D0D0D;
   border-bottom: 1px solid #a1a1a1;
