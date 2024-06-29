@@ -11,13 +11,24 @@
 <body>
 	<div class="container">
 		<header>
-			<a href="index.html" class="login-btn base-btn login-btn--help">CREATE</a>
+			<div class="right-buttons">
+				<section class="toggle-theme-btn">
+					<input type="checkbox" id="toggle-theme">
+					<label for="toggle-theme" class="checkbox-label">
+						<i class="fas fa-sun"></i>
+					  	<i class="fas fa-moon"></i>
+					  	<span class="ball"></span>
+					</label>
+				</section>
+				  <a href="index.html" class="base-btn login-btn">CREATE</a>
+			</div>
 		</header>
 		<main>
 			
 		</main>
 	</div>
 
+	<script src="https://kit.fontawesome.com/3cdfeaa995.js" crossorigin="anonymous"></script>
 	<script>
 		const checkbox = document.getElementById("toggle-theme");
 		const buttons = document.querySelectorAll("button");

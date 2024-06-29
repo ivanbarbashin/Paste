@@ -394,6 +394,12 @@ footer select {
     margin-right: 10px;
   }
 }
+footer .select--dark {
+  border-bottom: 1px solid #F2F2F2;
+}
+footer .select--dark option {
+  color: #0D0D0D;
+}
 footer .base-btn {
   margin-right: 15px;
 }

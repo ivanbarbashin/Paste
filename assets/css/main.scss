@@ -290,6 +290,14 @@ footer {
 		}
 	}
 
+	.select--dark {
+		border-bottom: 1px solid $background-color;
+
+		option {
+			color: $primary-color;
+		}
+	}
+
 	.base-btn{
 		margin-right: 15px;
 

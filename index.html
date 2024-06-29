@@ -12,7 +12,17 @@
 	<div class="container">
 		<header>
 			<a href="help.html" class="base-btn guide-btn">?</a>
-			<a href="log.html" class="base-btn login-btn">LOGIN</a>
+			<div class="right-buttons">
+				<section class="toggle-theme-btn">
+					<input type="checkbox" id="toggle-theme">
+					<label for="toggle-theme" class="checkbox-label">
+						<i class="fas fa-sun"></i>
+					  	<i class="fas fa-moon"></i>
+					  	<span class="ball"></span>
+					</label>
+				</section>
+				<a href="log.html" class="base-btn login-btn">LOGIN</a>
+			</div>
 		</header>
 		<main>
 			<form class="paste" action="">
@@ -37,7 +47,7 @@
 				<option value="1month">a month</option>
 				<option value="1year">a year</option>
 			</select>
-			<button class="base-btn"><img src="assets/img/edit_together.png" alt="edit_together"></button>
+			<button class="base-btn edit-together-btn"><img src="assets/img/edit_together.png" alt="edit_together"></button>
 			<button class="base-btn publish-editor-button">PUBLISH</button>
 		</footer>
 	</div>
@@ -56,15 +66,17 @@
 		const editorButton = document.querySelector('.publish-editor-button');
 		editorButton.addEventListener('click', function(){
 			let text = tinymce.get('mytextarea').getContent();
-			console.log(text)
 		});
 	</script>
+	<script src="https://kit.fontawesome.com/3cdfeaa995.js" crossorigin="anonymous"></script>
 	<script>
 		const checkbox = document.getElementById("toggle-theme");
 		const buttons = document.querySelectorAll("button");
 		const aTags = document.querySelectorAll("a");
 		const toggleThemeButton = document.querySelector(".checkbox-label");
 		const toggleThemeBall = document.querySelector(".checkbox-label .ball");
+		const settingsSelects = document.querySelectorAll("footer select");
+		const editTogetherPhoto = document.querySelector('.edit-together-btn img');
 
 		checkbox.addEventListener("change", () => {
 			document.body.classList.toggle("dark");
@@ -76,7 +88,15 @@
 			}
 			for(let i = 0; i < aTags.length; i++){
 				aTags[i].classList.toggle("dark-button");
-				
+			}
+			for(let i = 0; i < settingsSelects.length; i++){
+				settingsSelects[i].classList.toggle("select--dark");
+			}
+
+			if (editTogetherPhoto.getAttribute('src') == `assets/img/edit_together.png`){
+				editTogetherPhoto.src = `assets/img/edit_together-dark_theme.png`;
+			} else {
+				editTogetherPhoto.src = `assets/img/edit_together.png`;
 			}
 		});
 	</script>
