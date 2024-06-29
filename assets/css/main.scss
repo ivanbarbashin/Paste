@@ -48,9 +48,10 @@ header {
 		  }
 		  
 		.checkbox-label {
-			background-color: $primary-color;
+			background-color: $background-color;
+			border: 1px solid $primary-color;
 			width: 65px;
-			height: 32px;
+			height: 34px;
 			border-radius: 50px;
 			position: relative;
 			padding: 5px;
@@ -58,6 +59,11 @@ header {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+		}
+
+		.checkbox-label--dark {
+			background-color: $primary-color;
+			border: 1px solid $background-color;
 		}
 		
 		.fa-moon {
@@ -69,14 +75,18 @@ header {
 		}
 		
 		.checkbox-label .ball {
-			background-color: #fff;
+			background-color: $primary-color;
 			width: 30px;
 			height: 30px;
 			position: absolute;
-			left: 2px;
+			left: 1px;
 			top: 1px;
 			border-radius: 50%;
-			transition: transform 0.2s linear;
+			transition: transform 0.1s linear;
+		}
+
+		.ball--dark {
+			background-color: $background-color !important;
 		}
 		
 		#toggle-theme:checked + .checkbox-label .ball {
@@ -141,6 +151,15 @@ header {
 // helper classes
 .dark {
 	@include theme($dark-theme: true)
+}
+
+.dark-button {
+	border: 1px solid $background-color;
+	color: $background-color;
+
+	img {
+		color: $background-color;
+	}
 }
 
 

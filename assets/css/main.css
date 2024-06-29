@@ -147,9 +147,10 @@ header .right-buttons #toggle-theme {
   opacity: 0;
 }
 header .right-buttons .checkbox-label {
-  background-color: #0D0D0D;
+  background-color: #F2F2F2;
+  border: 1px solid #0D0D0D;
   width: 65px;
-  height: 32px;
+  height: 34px;
   border-radius: 50px;
   position: relative;
   padding: 5px;
@@ -158,6 +159,10 @@ header .right-buttons .checkbox-label {
   justify-content: space-between;
   align-items: center;
 }
+header .right-buttons .checkbox-label--dark {
+  background-color: #0D0D0D;
+  border: 1px solid #F2F2F2;
+}
 header .right-buttons .fa-moon {
   color: #f1c40f;
 }
@@ -165,14 +170,17 @@ header .right-buttons .fa-sun {
   color: #f39c12;
 }
 header .right-buttons .checkbox-label .ball {
-  background-color: #fff;
+  background-color: #0D0D0D;
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 2px;
+  left: 1px;
   top: 1px;
   border-radius: 50%;
-  transition: transform 0.2s linear;
+  transition: transform 0.1s linear;
+}
+header .right-buttons .ball--dark {
+  background-color: #F2F2F2 !important;
 }
 header .right-buttons #toggle-theme:checked + .checkbox-label .ball {
   transform: translateX(31px);
@@ -238,6 +246,14 @@ header .search {
 .dark {
   background-color: black;
   color: white;
+}
+
+.dark-button {
+  border: 1px solid #F2F2F2;
+  color: #F2F2F2;
+}
+.dark-button img {
+  color: #F2F2F2;
 }
 
 main {

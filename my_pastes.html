@@ -17,11 +17,11 @@
 				<section class="toggle-theme-btn">
 					<input type="checkbox" id="toggle-theme">
 					<label for="toggle-theme" class="checkbox-label">
-					  <i class="fas fa-moon"></i>
-					  <i class="fas fa-sun"></i>
-					  <span class="ball"></span>
+						<i class="fas fa-sun"></i>
+					  	<i class="fas fa-moon"></i>
+					  	<span class="ball"></span>
 					</label>
-				  </section>
+				</section>
 				  <a href="index.html" class="base-btn login-btn">CREATE</a>
 			</div>
 		</header>
@@ -63,13 +63,28 @@
 			</section>
 		</main>
 	</div>
-</body>
 
-<script src="https://kit.fontawesome.com/3cdfeaa995.js" crossorigin="anonymous"></script>
-<script>
-	const checkbox = document.getElementById("checkbox")
-	checkbox.addEventListener("change", () => {
-		document.body.classList.toggle("dark")
-	})
-</script>
+	<script src="https://kit.fontawesome.com/3cdfeaa995.js" crossorigin="anonymous"></script>
+	<script>
+		const checkbox = document.getElementById("toggle-theme");
+		const buttons = document.querySelectorAll("button");
+		const aTags = document.querySelectorAll("a");
+		const toggleThemeButton = document.querySelector(".checkbox-label");
+		const toggleThemeBall = document.querySelector(".checkbox-label .ball");
+
+		checkbox.addEventListener("change", () => {
+			document.body.classList.toggle("dark");
+			toggleThemeButton.classList.toggle("checkbox-label--dark");
+			toggleThemeBall.classList.toggle("ball--dark");
+
+			for(let i = 0; i < buttons.length; i++){
+				buttons[i].classList.toggle("dark-button");
+			}
+			for(let i = 0; i < aTags.length; i++){
+				aTags[i].classList.toggle("dark-button");
+				
+			}
+		});
+	</script>
+</body>
 </html>

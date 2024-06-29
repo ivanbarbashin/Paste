@@ -58,6 +58,27 @@
 			let text = tinymce.get('mytextarea').getContent();
 			console.log(text)
 		});
-	  </script>
+	</script>
+	<script>
+		const checkbox = document.getElementById("toggle-theme");
+		const buttons = document.querySelectorAll("button");
+		const aTags = document.querySelectorAll("a");
+		const toggleThemeButton = document.querySelector(".checkbox-label");
+		const toggleThemeBall = document.querySelector(".checkbox-label .ball");
+
+		checkbox.addEventListener("change", () => {
+			document.body.classList.toggle("dark");
+			toggleThemeButton.classList.toggle("checkbox-label--dark");
+			toggleThemeBall.classList.toggle("ball--dark");
+
+			for(let i = 0; i < buttons.length; i++){
+				buttons[i].classList.toggle("dark-button");
+			}
+			for(let i = 0; i < aTags.length; i++){
+				aTags[i].classList.toggle("dark-button");
+				
+			}
+		});
+	</script>
 </body>
 </html>
