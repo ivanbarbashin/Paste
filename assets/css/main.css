@@ -748,27 +748,4 @@ footer .base-btn {
   .pastes-catalog {
     width: 94%;
   }
-}
-
-.email-cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-}
-.email-cover h1 {
-  font-size: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.email-cover h2 {
-  font-size: 30px;
-  font-weight: 500;
-}
-.email-cover button {
-  margin-top: 30px;
-  font-size: 30px;
-  padding: 10px 40px;
-  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
